@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const PostTitle = styled.div`
   font-family: "Questrial", sans-serif;
   color: rgb(65, 65, 65);
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
 `;

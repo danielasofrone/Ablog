@@ -17,14 +17,19 @@ export const NavLink = styled.div`
   display: none;
   @media (min-width: 768px) {
     display: block;
-    color: #afafaf;
     transition: color 0.4s ease 0s;
     font-family: "Mulish";
     line-height: 32px;
     margin: 5px 10px 0 10px;
     cursor: pointer;
+    a {
+      color: #afafaf;
+      text-decoration: none;
+      background-color: inherit;
+    }
     &:hover {
       color: #000;
+      text-decoration: none;
     }
   }
 `;
