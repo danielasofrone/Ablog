@@ -1,12 +1,16 @@
 import React from "react";
 import * as S from "./homePage.styled";
 import NavBar from "../NavBar/NavBar";
-import BlogPosts from "../BlogPosts/BlogPosts";
+import BlogPost from "../BlogPost/BlogPost";
 
 const Homepage = () => (
   <S.Wrapper>
     <NavBar />
-    <BlogPosts />
+    <BlogPost />
+    <BlogPost />
+    <BlogPost />
+    <BlogPost />
+    <BlogPost />
   </S.Wrapper>
 );
 
