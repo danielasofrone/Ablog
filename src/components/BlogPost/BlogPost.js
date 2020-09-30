@@ -1,12 +1,17 @@
 import React from "react";
 import * as S from "./blogPost.styled";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const BlogPost = ({ title, postText }) => (
+const BlogPost = ({ title, excerpt, coverImage, id, slug }) => (
   <S.Wrapper>
-    <S.PostTitle>{title}</S.PostTitle>
-    <S.ImageContainer />
-    <S.PostText>{postText}</S.PostText>
+    <S.PostTitle>
+      <Link to={`/post/${id}/${slug}`}>{title}</Link>
+    </S.PostTitle>
+    <S.ImageContainer>
+      <img src={coverImage.url} alt={title} />
+    </S.ImageContainer>
+    <S.PostText>{excerpt}</S.PostText>
   </S.Wrapper>
 );
 

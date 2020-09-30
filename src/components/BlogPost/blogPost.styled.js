@@ -20,6 +20,12 @@ export const PostTitle = styled.div`
 export const ImageContainer = styled.div`
   height: 200px;
   background-color: grey;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
 `;
 
 export const PostText = styled.div`
