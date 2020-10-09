@@ -50,9 +50,15 @@ export const MenuIcon = styled.div`
 `;
 
 export const Title = styled.div`
-  color: #000;
-  font-family: "Questrial", sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  cursor: pointer;
+  a {
+    color: #000;
+    font-family: "Questrial", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      color: #afafaf;
+      text-decoration: none;
+    }
+  }
 `;

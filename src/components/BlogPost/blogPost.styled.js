@@ -15,16 +15,18 @@ export const PostTitle = styled.div`
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
+  cursor: pointer;
 `;
 
 export const ImageContainer = styled.div`
-  height: 200px;
+  max-height: 400px;
   background-color: grey;
   overflow: hidden;
 
   img {
     object-fit: contain;
     width: 100%;
+    cursor: pointer;
   }
 `;
 

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const AboutPage = () => (
   <S.Wrapper>
-    <S.NavigationLink>
+    <NavBar>
       <Link to={"/"}>Home</Link>
-    </S.NavigationLink>
+    </NavBar>
   </S.Wrapper>
 );
 
