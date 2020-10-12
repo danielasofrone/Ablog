@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const BlogPost = ({ title, excerpt, coverImage, text, id, slug }) => (
   <S.Wrapper>
     <S.PostTitle>
-      {title}
-      {/* <Link to={`/post/${id}/${slug}`}>{title}</Link> */}
+      <Link to={`/post/${id}/${slug}`}>{title}</Link>
     </S.PostTitle>
     <S.ImageContainer>
       <img src={coverImage} alt={title} />
     </S.ImageContainer>
     <S.PostText>{excerpt}</S.PostText>
+    <S.PostText>{text}</S.PostText>
   </S.Wrapper>
 );
 
@@ -20,6 +20,7 @@ BlogPost.propTypes = {
   title: PropTypes.string,
   excerpt: PropTypes.string,
   cover: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default BlogPost;

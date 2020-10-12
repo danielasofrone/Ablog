@@ -11,11 +11,17 @@ export const Wrapper = styled.div`
 
 export const PostTitle = styled.div`
   font-family: "Questrial", sans-serif;
-  color: rgb(65, 65, 65);
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
   cursor: pointer;
+  a {
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    &:hover {
+      color: #000;
+    }
+  }
 `;
 
 export const ImageContainer = styled.div`

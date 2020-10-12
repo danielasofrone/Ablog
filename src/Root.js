@@ -10,7 +10,8 @@ const Root = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/about" component={AboutPage} />
-      {/* <Route exact path="/post/:id/:slug" component={SinglePost} /> */}
+      {/* <Route exact path="/blogPost/:slug" component={SinglePost} /> */}
+      {/* <Route exact path="/blogPost/:id/:slug" component={SinglePost} /> */}
     </Switch>
   </Router>
 );
