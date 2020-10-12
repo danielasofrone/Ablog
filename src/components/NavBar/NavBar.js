@@ -14,7 +14,15 @@ const NavBar = ({ children }) => (
       <S.MenuIcon>
         <FontAwesomeIcon icon={faBars} />
       </S.MenuIcon>
-      <S.NavLink>{children}</S.NavLink>
+      <S.NavLink>
+        <Link to={"/about"}>About</Link>
+      </S.NavLink>
+      <S.NavLink>
+        <Link to={"/news"}>News</Link>
+      </S.NavLink>
+      <S.NavLink>
+        <Link to={"/contact"}>Contact</Link>
+      </S.NavLink>
     </S.Navigation>
   </S.Wrapper>
 );

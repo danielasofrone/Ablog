@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   border: 1px solid rgba(244, 243, 242, 0.75);
   margin-top: 70px;
-  padding: 50px;
+  padding: 30px 20px 20px 20px;
+  @media (min-width: 576px) {
+    padding: 50px;
+  }
   @media (min-width: 768px) {
     padding: 70px 100px;
   }
@@ -11,7 +14,7 @@ export const Wrapper = styled.div`
 
 export const PostTitle = styled.div`
   font-family: "Questrial", sans-serif;
-  font-size: 2rem;
+  font-size: 1.125rem;
   text-align: center;
   margin-bottom: 30px;
   cursor: pointer;
@@ -21,6 +24,14 @@ export const PostTitle = styled.div`
     &:hover {
       color: #000;
     }
+  }
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
 `;
 
@@ -32,7 +43,6 @@ export const ImageContainer = styled.div`
   img {
     object-fit: contain;
     width: 100%;
-    cursor: pointer;
   }
 `;
 
@@ -41,5 +51,8 @@ export const PostText = styled.div`
   color: rgb(65, 65, 65);
   font-size: 18px;
   text-align: left;
-  margin: 50px 0 30px 0;
+  margin: 20px 0;
+  @media (min-width: 768px) {
+    margin: 50px 0 30px 0;
+  }
 `;

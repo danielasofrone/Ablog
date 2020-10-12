@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./homePage.styled";
-import * as C from "../NavBar/navBar.styled";
 import NavBar from "../NavBar/NavBar";
 import BlogPost from "../BlogPost/BlogPost";
-import { Link } from "react-router-dom";
 import client from "../../client";
 
 const Homepage = () => {
@@ -22,22 +20,11 @@ const Homepage = () => {
     <S.Wrapper>
       {loading ? (
         <div>
-          <h2>Loading...</h2>
+          <S.LoadingState>Loading...</S.LoadingState>
         </div>
       ) : (
         <div>
-          <NavBar>
-            <C.NavLink>
-              <Link to={"/"}>About</Link>
-            </C.NavLink>
-            <C.NavLink>
-              <Link to={"/news"}>News</Link>
-            </C.NavLink>
-            <C.NavLink>
-              {" "}
-              <Link to={"/contact"}>Contact</Link>
-            </C.NavLink>
-          </NavBar>
+          <NavBar />
           {blogPosts.map((blogPost) => (
             <BlogPost
               id={blogPost.sys.id}

@@ -22,6 +22,11 @@ export const NavLink = styled.div`
     line-height: 32px;
     margin: 5px 10px 0 10px;
     cursor: pointer;
+
+    .current {
+      color: #000;
+      text-decoration: underline;
+    }
     a {
       color: #afafaf;
       text-decoration: none;
