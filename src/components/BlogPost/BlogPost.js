@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const BlogPost = ({ title, excerpt, coverImage, text, id, slug }) => (
   <S.Wrapper>
     <S.PostTitle>
-      <Link to={`/post/${id}/${slug}`}>{title}</Link>
+      <Link to={`/post/${slug}`}>{title}</Link>
     </S.PostTitle>
     <S.ImageContainer>
       <img src={coverImage} alt={title} />

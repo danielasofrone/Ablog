@@ -38,13 +38,14 @@ const Homepage = () => {
               <Link to={"/contact"}>Contact</Link>
             </C.NavLink>
           </NavBar>
-          {blogPosts.map((blogPost, i) => (
+          {blogPosts.map((blogPost) => (
             <BlogPost
-              id={i}
-              key={i}
+              id={blogPost.sys.id}
+              key={blogPost.sys.id}
               title={blogPost.fields.title}
               excerpt={blogPost.fields.excerpt}
               coverImage={blogPost.fields.picture.fields.file.url}
+              slug={blogPost.fields.slug}
             />
           ))}
         </div>

@@ -1,31 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import * as S from "./singlePost.styled";
 import NavBar from "../NavBar/NavBar";
 import BlogPost from "../BlogPost/BlogPost";
 import client from "../../client";
 
-// import { useParams } from "react-router-dom";
-
 const SinglePost = () => {
   const [singleBlogPost, setSingleBlogPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect((params) => {
-    if (params && params.slug) {
+  let { slug } = useParams();
+
+  useEffect(() => {
+    if (slug) {
       client
-        .getEntries({ content_type: "blogPost", "fields.slug": params.slug })
+        .getEntries({ content_type: "blogPost", "fields.slug": slug })
         .then((response) => {
-          setSingleBlogPost({ singleBlogPost: response.items[0] });
+          setSingleBlogPost(response.items[0]);
           setLoading(false);
-          console.log("hello", params.slug);
         });
     }
-  }, []);
-
-  // let { id, slug } = useParams();
-  // console.log({ id, slug });
-
-  // const postData = axios.get(`http://api.com/single/?postId=${id}`);
+  }, [slug]);
 
   return (
     <S.Wrapper>
