@@ -37,7 +37,7 @@ const Homepage = () => {
               {" "}
               <Link to={"/contact"}>Contact</Link>
             </C.NavLink>
-          </NavBar>
+          </NavBar><div>hallo</div>
           {blogPosts.map((blogPost) => (
             <BlogPost
               id={blogPost.sys.id}
